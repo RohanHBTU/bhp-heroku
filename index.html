@@ -8,10 +8,12 @@
 </head>
 <body>
 <div class="img"></div>
+<div class="container">
+<center>
 <form class="form">
 	<h2>Area (Square Feet)</h2>
     <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
-	<h2>BHK</h2>
+	<h2>BHK</h2><table><tr><td>
 	<div class="switch-field">
 		<input type="radio" id="radio-bhk-1" name="uiBHK" value="1"/>
 		<label for="radio-bhk-1">1</label>
@@ -23,10 +25,10 @@
 		<label for="radio-bhk-4">4</label>
 		<input type="radio" id="radio-bhk-5" name="uiBHK" value="5"/>
 		<label for="radio-bhk-5">5</label>
-	</div>
+	</div></td></tr></table>
 	</form>
 <form class="form">
-	<h2>Bath</h2>
+	<h2>Bathroom</h2><table><tr><td>
 	<div class="switch-field">
 		<input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
 		<label for="radio-bath-1">1</label>
@@ -38,7 +40,7 @@
 		<label for="radio-bath-4">4</label>
 		<input type="radio" id="radio-bath-5" name="uiBathrooms" value="5"/>
 		<label for="radio-bath-5">5</label>
-	</div>
+	</div></td></tr></table>
 		<h2>Location</h2>
 	<div>
   <select class="location" name="" id="uiLocations">
@@ -48,6 +50,7 @@
   </select>
 </div>
 	<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
-	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+	<div id="uiEstimatedPrice" class="result"></div></center>
+</div>
 </body>
 </html>
