@@ -26,10 +26,10 @@ function getBathValue() {
     var location = document.getElementById("uiLocations");
     var estPrice = document.getElementById("uiEstimatedPrice");
   
-    var url = "/bangalore-price-predictor-api/predict_home_price"; //Use this if you are NOT using nginx which is first 7 tutorials
+    // var url = {{ url_for('predict_home_price')}}; //Use this if you are NOT using nginx which is first 7 tutorials
     // var url = "/api/predict_home_price"; // Use this if  you are using nginx. i.e tutorial 8 and onwards
   
-    $.post(url, {
+    $.post(url_for('predict_home_price'), {
         total_sqft: parseFloat(sqft.value),
         bhk: bhk,
         bath: bathrooms,
@@ -43,9 +43,9 @@ function getBathValue() {
   
   function onPageLoad() {
     console.log( "document loaded" );
-    var url = "/bangalore-price-predictor-api/get_location_names"; // Use this if you are NOT using nginx which is first 7 tutorials
+    // var url = {{ url_for('get_location_names')}}; // Use this if you are NOT using nginx which is first 7 tutorials
     // var url = "/api/get_location_names"; // Use this if  you are using nginx. i.e tutorial 8 and onwards
-    $.get(url,function(data, status) {
+    $.get(url_for('get_location_names'),function(data, status) {
         console.log("got response for get_location_names request");
         if(data) {
             var locations = data.locations;
