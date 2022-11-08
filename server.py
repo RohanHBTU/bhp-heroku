@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify
 import pickle
 import json
 import numpy as np
-#import util
 
 app = Flask(__name__)
 
@@ -41,8 +40,6 @@ def load_saved_artifacts():
             __model = pickle.load(f)
     print("loading saved artifacts...done")
 
-#def get_location_names():
-#    return __locations
 
 def get_data_columns():
     return __data_columns
